@@ -10,12 +10,12 @@ import {
   ExpressAdapter,
   NestExpressApplication,
 } from '@nestjs/platform-express';
-import { AppModule } from './app/app.module';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(
     AppModule,
-    new ExpressAdapter()
+    new ExpressAdapter(),
   );
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
@@ -33,7 +33,7 @@ async function bootstrap() {
   app.listen(process.env.PORT || 3333);
 
   Logger.log(
-    `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`
+    `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`,
   );
 }
 
