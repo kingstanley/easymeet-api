@@ -12,7 +12,7 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(environment.MONGO_URL),
+    MongooseModule.forRoot(process.env.MONGO_URL || environment.MONGO_URL),
     AccountModule,
     MeetingModule,
     PassportModule.register({ defaultStrategy: 'jwt' }),
