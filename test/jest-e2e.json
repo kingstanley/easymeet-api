@@ -1,0 +1,19 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@app/dto/(.*)": "<rootDir>/../libs/dto/src/$1",
+    "@app/dto": "<rootDir>/../libs/dto/src",
+    "@app/schema/(.*)": "<rootDir>/../libs/schema/src/$1",
+    "@app/schema": "<rootDir>/../libs/schema/src"
+  }
+}
