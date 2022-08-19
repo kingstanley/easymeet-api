@@ -24,4 +24,7 @@ export class MeetingService {
   async instantMeeting(meeting: MeetingDto) {
     return await this.meetingModel.create(meeting);
   }
+  async getMeetingByCode(roomId: string) {
+    return await this.meetingModel.findOne({ code: roomId });
+  }
 }
