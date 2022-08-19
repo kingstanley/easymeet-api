@@ -42,7 +42,7 @@ export class MeetingController {
   getMeeting(@Param('id') id: string) {
     return this.meetingService.getMeeting(id);
   }
-  @('meeting-code')
+  @Get('meeting-code')
   getMeetingByCode(@Param('id') roomId: string) {
     return this.meetingService.getMeetingByCode(roomId);
   }
