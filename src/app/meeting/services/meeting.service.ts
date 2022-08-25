@@ -18,7 +18,6 @@ export class MeetingService {
   }
   async scheduleMeeting(meeting: MeetingDto) {
     const saved = await this.meetingModel.create(meeting);
-    // send email
     return saved;
   }
   async instantMeeting(meeting: MeetingDto) {

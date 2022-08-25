@@ -22,6 +22,8 @@ export class Meeting {
   invites!: Array<string>; // emails to invite
   @Prop({ type: String, minlength: 4, maxlength: 8 })
   code!: string;
+  @Prop()
+  guests!: string;
   // constructor() {
   //   this.title = '';
   //   this.description = '';
